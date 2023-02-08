@@ -1,8 +1,10 @@
-import { Loading } from '@components/Loading';
-import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from '@expo-google-fonts/nunito-sans';
 import { Routes } from '@routes/index';
 import { StatusBar } from 'expo-status-bar';
 import { ThemeProvider } from 'styled-components/native';
+
+import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from '@expo-google-fonts/nunito-sans';
+
+import { Loading } from '@components/Loading';
 
 import theme from './src/theme'
 
@@ -15,7 +17,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <StatusBar style="dark" translucent />
-      {!fontLoader ? <Routes /> : <Loading />}
+      {fontLoader ? <Routes /> : <Loading />}
     </ThemeProvider>
   );
 }
