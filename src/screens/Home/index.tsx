@@ -1,3 +1,4 @@
+import { Button } from '@components/Button';
 import { Header } from '@components/Header';
 import { Scoreboard } from '@components/Scoreboard';
 
@@ -8,6 +9,7 @@ export const Home = () => {
     <Container>
       <Header />
       <Scoreboard />
+      <Button />
     </Container>
   )
 };
