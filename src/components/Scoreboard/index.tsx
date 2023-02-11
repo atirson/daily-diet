@@ -15,7 +15,7 @@ export const Scoreboard = ({ type = 'SUCCESS', ...rest }: Props) => {
           icon='north-east' 
           size={THEME.FONT_SIZE.XL} 
           color={
-            type ? THEME.COLORS.GREEN_DARK :
+            type === 'SUCCESS' ? THEME.COLORS.GREEN_DARK :
             THEME.COLORS.RED_DARK
           } 
         />

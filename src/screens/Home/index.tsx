@@ -1,4 +1,5 @@
 import { Button } from '@components/Button';
+import { Card } from '@components/Card';
 import { Header } from '@components/Header';
 import { Scoreboard } from '@components/Scoreboard';
 
@@ -9,7 +10,7 @@ export const Home = () => {
     <Container>
       <Header />
       <Scoreboard />
-      <Button />
+      <Button icon='add' text='Nova refeição' />
     </Container>
   )
 };
