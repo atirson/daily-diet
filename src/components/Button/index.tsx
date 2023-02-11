@@ -6,9 +6,10 @@ import { MaterialIcons } from '@expo/vector-icons'
 type Props = TouchableOpacityProps & {
   type?: ButtonStyleProps;
   icon?: keyof typeof MaterialIcons.glyphMap;
+  text: string;
 }
 
-export const Button = ({ type = 'DARK', icon, ...rest }: Props) => {
+export const Button = ({ type = 'DARK', text, icon, ...rest }: Props) => {
   return (
     <ButtonComponent type={type} {...rest}>
       {
@@ -21,7 +22,7 @@ export const Button = ({ type = 'DARK', icon, ...rest }: Props) => {
             } 
           />
       }
-      <ButtonText type={type}>Teste</ButtonText>
+      <ButtonText type={type}>{text}</ButtonText>
     </ButtonComponent> 
   )
 };
