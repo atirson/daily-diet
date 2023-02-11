@@ -20,7 +20,7 @@ export const Container = styled(TouchableOpacity)`
 
 export const Hour = styled.Text`
    ${({ theme }) => css`
-      font-size: ${theme.FONT_SIZE.MD};
+      font-size: ${theme.FONT_SIZE.MD}px;
       color: ${theme.COLORS.GRAY_700};
       font-family: ${theme.FONT_FAMILY.BOLD};
    `}
@@ -40,7 +40,7 @@ export const Title = styled.Text.attrs({
   text-overflow: ellipsis;
 
   ${({ theme }) => css`
-    font-size: ${theme.FONT_SIZE.LG};
+    font-size: ${theme.FONT_SIZE.LG}px;
     color: ${theme.COLORS.GRAY_700};
     font-family: ${theme.FONT_FAMILY.BOLD};
   `}

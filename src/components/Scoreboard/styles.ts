@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components/native";
 import { TouchableOpacity } from "react-native";
 
-export type ScoreboardStyleProps = 'SUCCESS' | 'FAILURE';
+export type ScoreboardStyleProps = 'SUCCESS' | 'FAILURE' | 'DEFAULT';
 
 type Props = {
   type: ScoreboardStyleProps; 
@@ -17,6 +17,10 @@ export const Container = styled(TouchableOpacity)<Props>`
 
   ${({ theme, type }) => type === 'FAILURE' && css`
     background-color: ${theme.COLORS.RED_LIGHT};
+  `}
+
+  ${({ theme, type }) => type === 'DEFAULT' && css`
+    background-color: ${theme.COLORS.GRAY_200};
   `}
 
   flex-direction: column;
